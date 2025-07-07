@@ -10,9 +10,9 @@ class User(Base):
   password = Column(String)
   is_active = Column(Boolean,default=True)
 
-  class Sales(Base):
-    __tablename__="sales"
+class Sales(Base):
+  __tablename__="sales"
 
-    year = Column(Integer, primary_key=True, index=True)
-    department = Column(String,primary_key=True,index=True)
-    sales = Column(Float)
+  year = Column(Integer, primary_key=True, index=True)
+  department = Column(String,primary_key=True,index=True)
+  sales = Column(Float)
