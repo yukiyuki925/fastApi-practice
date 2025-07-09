@@ -49,6 +49,7 @@ export default function Login() {
             type="password"
             id="password"
             autoComplete="current-password"
+            onChange={handleChange}
           />
           <Button
             fullWidth

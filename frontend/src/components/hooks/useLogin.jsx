@@ -8,8 +8,8 @@ export const useLogin = () => {
   const navigate = useNavigate();
   const login = (user) => {
     console.log("ログイン処理開始");
-    const endpoint = "https://jsonplaceholder.typicode.com/users";
-    const queries = { username: user.username };
+    const endpoint = "http://127.0.0.1:8000/users";
+    const queries = { name: user.username, password: user.password };
     axios.get(endpoint, { params: queries }).then((res) => {
       const found = res.data[0];
       if (!found) {
